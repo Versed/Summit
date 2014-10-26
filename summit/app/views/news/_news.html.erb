@@ -1,0 +1,12 @@
+<% @section.news.each do |news_article| %>
+  <p>
+    <strong>Title:</strong>
+    <%= news_article.title %>
+  </p>
+
+  <p><%= news_article.body %></p>
+
+  <p>
+    <%= link_to 'Destroy News Article', [news.section, news],
+      method: :delete, data: { confirm: 'Are you sure?' } %>
+<% end %>

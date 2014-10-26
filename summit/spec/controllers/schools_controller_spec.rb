@@ -140,20 +140,4 @@ RSpec.describe SchoolsController, :type => :controller do
       end
     end
   end
-
-  describe "DELETE destroy" do
-    it "destroys the requested school" do
-      school = School.create! valid_attributes
-      expect {
-        delete :destroy, {:id => school.to_param}, valid_session
-      }.to change(School, :count).by(-1)
-    end
-
-    it "redirects to the schools list" do
-      school = School.create! valid_attributes
-      delete :destroy, {:id => school.to_param}, valid_session
-      expect(response).to redirect_to(schools_url)
-    end
-  end
-
 end

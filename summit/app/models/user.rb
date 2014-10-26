@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  belongs_to :school
   has_secure_password
   validates :email, presence: true, uniqueness: true,
             format: {

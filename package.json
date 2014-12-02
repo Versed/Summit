@@ -1,0 +1,10 @@
+{
+  "author": "Nathan Kluth",
+  "name": "summit",
+  "version": "0.0.0",
+  "dependencies": {},
+  "devDependencies": {},
+  "engines": {
+    "node": "*"
+  }
+}

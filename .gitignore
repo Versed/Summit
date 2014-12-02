@@ -25,3 +25,4 @@ npm-debug.log
 tmp/
 public/
 node_modules/
+.vagrant/

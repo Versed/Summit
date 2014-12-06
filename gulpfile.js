@@ -7,6 +7,7 @@ var gutil = require('gulp-util');
 var source = require('vinyl-source-stream');
 var browserSync = require('browser-sync');
 var less = require('gulp-less');
+var nodemon = require('gulp-nodemon');
 
 var reload = browserSync.reload;
 
@@ -34,11 +35,6 @@ gulp.task('javascript', function() {
 
 gulp.task('default', ['javascript']);
 gulp.task('serve', ['javascript'], function() {
-  browserSync({
-    server: {
-      baseDir: 'server'
-    }
-  });
-
+  nodemon({script: './server/index.js'});
   gulp.watch('less/*.less', ['less']);
 });

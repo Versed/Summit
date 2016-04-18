@@ -1,4 +1,3 @@
 Summit
 ======
 
-Meetings - decentralized
